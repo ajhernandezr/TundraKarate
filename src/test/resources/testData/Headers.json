@@ -1,0 +1,17 @@
+{
+  "DEV": {
+    "PCY_CLIENT_VERSION": "2",
+    "PCY_CLIENT_USER_ID": "1",
+    "x-auth-location": "CH"
+  },
+  "PRE": {
+    "PCY_CLIENT_VERSION": "2",
+    "PCY_CLIENT_USER_ID": "1",
+    "x-auth-location": "CH"
+  },
+  "PROD": {
+    "PCY_CLIENT_VERSION": "2",
+    "PCY_CLIENT_USER_ID": "1",
+    "x-auth-location": "CH"
+  }
+}

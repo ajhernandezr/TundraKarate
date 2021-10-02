@@ -1,0 +1,5 @@
+{
+  "dev": "https://jsonplaceholder.typicode.com/",
+  "pre1": "https://jsonplaceholderPRE.typicode.com/",
+  "prod": "https://jsonplaceholderPROD.typicode.com/"
+}
