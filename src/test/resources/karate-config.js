@@ -7,14 +7,13 @@ function karateConfig() {
     var env = karate.env;
     var config = {};
     var allSuites = {
-        jsonplaceholder: "VA-jsonplaceholder"
+        jsonplaceholder: "jsonplaceholder"
     }
     //If running tests locally, replace the the part after ":" with one of the keys from allSuites
     var suite = (karate.properties["karate.suite"] ? karate.properties["karate.suite"] : allSuites.jsonplaceholder);
 
     // Common variables needed for all test
     config.headersFile = karate.read('classpath:testData/Headers.json');
-    config.baseUrl = 'https://www.google.es/';
 
     config.allUrl = karate.read('classpath:testData/URL.json');
 
