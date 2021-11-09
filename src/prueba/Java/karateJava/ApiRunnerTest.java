@@ -22,7 +22,7 @@ public class ApiRunnerTest {
     public void testParallel() throws IOException {
         String suite = String.valueOf(System.getProperty("karate.suite"));
         List<String> tags = Arrays.asList("~@ignore");
-        List<String> features = Arrays.asList("classpath:features/" + "jsonplaceholder");
+        List<String> features = Arrays.asList("classpath:features/" + suite);
         String karateOutputPath = "target/surefire-reports";
         Results results = Runner.parallel(tags, features, 3, karateOutputPath);
 
