@@ -15,6 +15,6 @@ protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
 val GetRandomUserId = scenario("GetRandomUserId").exec(karateFeature("features/jsonplaceholder/DisplayUserInformation.feature@randomUserId"))
 
  setUp(
-    GetRandomUserId.inject(nothingFor(35.seconds),atOnceUsers(10),rampUsers(10).during(5.seconds),constantUsersPerSec(10).during(5.seconds)).protocols(protocol)
+    GetRandomUserId.inject(nothingFor(1.seconds),atOnceUsers(5),rampUsers(5).during(5.seconds),constantUsersPerSec(5).during(5.seconds)).protocols(protocol)
     ).assertions(global.responseTime.max.lt(200000),global.failedRequests.percent.lte(25))
 }
