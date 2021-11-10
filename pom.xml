@@ -59,13 +59,6 @@
             <testResource>
                 <directory>src/test/resources</directory>
             </testResource>
-            <testResource>
-                <directory>src/test/performance</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                    <exclude>**/*.scala</exclude>
-                </excludes>
-            </testResource>
         </testResources>
         <plugins>
             <plugin>
@@ -84,8 +77,11 @@
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>${gatling.plugin.version}</version>
                 <configuration>
-                    <disableCompiler>true</disableCompiler>
                     <runMultipleSimulations>true</runMultipleSimulations>
+                    <simulationsFolder>src/test/resources</simulationsFolder>
+                    <includes>
+                    <directory>features.LoadSimulation</directory>
+                </includes>
                 </configuration>
             </plugin>
         </plugins>
