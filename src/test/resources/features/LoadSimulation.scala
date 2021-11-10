@@ -4,6 +4,7 @@ import com.intuit.karate.gatling.PreDef._
 import io.gatling.core.Predef._
 import scala.concurrent.duration._
 
+
 class LoadSimulation extends Simulation {
 
 val protocol = karateProtocol(
@@ -12,7 +13,7 @@ val protocol = karateProtocol(
 
 protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
 
-val GetRandomUserId = scenario("GetRandomUserId").exec(karateFeature("features/jsonplaceholder/DisplayUserInformation.feature@randomUserId"))
+val GetRandomUserId = scenario("GetRandomUserId").exec(karateFeature("classpath:features/jsonplaceholder/DisplayUserInformation.feature@randomUserId"))
 
  setUp(
     GetRandomUserId.inject(nothingFor(1.seconds),atOnceUsers(5),rampUsers(5).during(5.seconds),constantUsersPerSec(5).during(5.seconds)).protocols(protocol)
