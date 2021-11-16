@@ -19,7 +19,6 @@ function karateConfig() {
 
 
     config.utility = karate.read('classpath:Utility.js');
-    config.randomNumber =  Math.floor((Math.random() * 10) +1)
 
     return config;
 }
