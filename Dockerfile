@@ -7,6 +7,6 @@ WORKDIR /docker
 COPY    pom.xml .
 RUN     mvn dependency:resolve
 
-COPY    src .
+COPY    src ./src
 
 RUN     mvn clean install
